@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+        let num3 = parseFloat(prompt("Enter the third number:"));
+
+        let numbers = [num1, num2, num3];
+
+        let sum = numbers[0] + numbers[1] + numbers[2];
+        let product = numbers[0] * numbers[1] * numbers[2];
+        let division;
+        if (numbers[1] === 0 || numbers[2] === 0) {
+            division = "Undefined (division by zero)";
+        } else {
+            division = (numbers[0] / numbers[1] / numbers[2]).toFixed(2);
+        }
+
+        alert("Results:\n" +
+            "Sum: " + sum.toFixed(2) + "\n" +
+            "Product: " + product.toFixed(2) + "\n" +
+            "Division: " + division);
+    </script>
+</body>
+</html>

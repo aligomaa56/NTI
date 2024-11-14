@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const inputString = prompt("Enter a string to check if it's a palindrome: ");
+
+        let cleanedString = inputString.replace(/[\W_]/g, "");
+        if (!caseSensitive) {
+            cleanedString = cleanedString.toLowerCase();
+        }
+
+        const isPalindrome = cleanedString === cleanedString.split("").reverse().join("");
+
+        if (isPalindrome) {
+            alert(`The string "${inputString}" is a palindrome.`);
+        } else {
+            alert(`The string "${inputString}" is NOT a palindrome.`);
+        }
+
+    </script>
+</body>
+
+</html>
